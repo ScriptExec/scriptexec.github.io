@@ -47,37 +47,56 @@
     border: none;
   }
 </style>
-  <body>
-    <script src="js.js"></script>
-    <video autoplay muted loop id="bg" style="min-width: 100%; min-height: 100%; width: auto; height: auto; margin: auto; z-index: -100; position: fixed">
-      <source src="assets/vids/forest.mp4" type="video/mp4">
-    </video>
-    <div class="w3-display-topleft w3-padding-large w3-xlarge w3-animate-opacity w3-text-white">Welcome</div>
-    <div class="w3-display-middle">
-      <h1 class="w3-jumbo w3-animate-opacity w3-text-white" style="position: center; margin: auto;">WEBSITE<br>COMING SOON</h1>
-      <hr class="w3-border-grey" style="margin:auto;width:40%">
-      <!--<p class="w3-large w3-center">... days left</p>-->
-    </div>
-      <div class="w3-display-bottomleft w3-padding-large w3-animate-opacity w3-text-white" id="parent" style="display: block;">
-        <div>
-          <a class="child" style="text-align: center; text-decoration: none; transbutton" href="https://github.com/ScriptExec" target="_blank">
-            <text class="w3-text-white fa fa-github" style="font-size:24px"></text>
-            <text class="w3-text-white" style="font-size:16px">GitHub</text>
-          </a>
-        </div>
-        <div>
-          <a class="child" style="text-align: center; text-decoration: none; transbutton" href="https://twitter.com/ScriptExec" target="_blank">
-            <text class="w3-text-white fa fa-twitter" style="font-size:24px"></text>
-            <text class="w3-text-white" style="font-size:16px">Twitter</text>
-          </a>
-        </div>
-        <div>
-          <a class="child" style="text-align: center; text-decoration: none; transbutton" href="https://www.youtube.com/channel/UCZRHmo7vZ4XYkEseZkEsTGg" target="_blank">
-            <text class="w3-text-white fa fa-youtube" style="font-size:24px"></text>
-            <text class="w3-text-white" style="font-size:16px">YouTube</text>
-          </a>
-        </div>
+<body>
+  <script src="js.js"></script>
+  <video autoplay muted loop id="bg" style="min-width: 100%; min-height: 100%; width: auto; height: auto; margin: auto; z-index: -100; position: fixed">
+    <source src="assets/vids/forest.mp4" type="video/mp4">
+  </video>
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-black" style="display: none;" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-xxlarge" onclick="w3_close()">&times;</button>
+    <a href="#downloads" class="w3-bar-item w3-button">Downloads</a>
+    <a href="#documentation" class="w3-bar-item w3-button">Documentation</a>
+    <a href="#examples" class="w3-bar-item w3-button">Examples</a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Dropdown <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-gray">
+        <a href="#" class="w3-bar-item w3-button">Link</a>
+        <a href="#" class="w3-bar-item w3-button">Link</a>
       </div>
     </div>
-  </body>
+  </div>
+  
+<div id="main" style="left: 0%">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge w3-animate-opacity w3-text-white">
+  <button id="openNav" class="w3-text-white transbutton" style="font-size:24px" onclick="w3_open()">&#9776;</button>
+  <text id="pageName" style="font-size:24px">pageName</text>
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-opacity w3-text-white" style="position: center; margin: auto;">WEBSITE<br>COMING SOON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <!--<p class="w3-large w3-center">... days left</p>-->
+  </div>
+    <div class="w3-display-bottomleft w3-padding-large w3-animate-opacity w3-text-white" id="parent" style="display: block;">
+      <div>
+        <a class="child" style="text-align: center; text-decoration: none; transbutton" href="https://github.com/ScriptExec" target="_blank">
+          <text class="w3-text-white fa fa-github" style="font-size:24px"></text>
+          <text class="w3-text-white" style="font-size:16px">GitHub</text>
+        </a>
+      </div>
+      <div>
+        <a class="child" style="text-align: center; text-decoration: none; transbutton" href="https://twitter.com/ScriptExec" target="_blank">
+          <text class="w3-text-white fa fa-twitter" style="font-size:24px"></text>
+          <text class="w3-text-white" style="font-size:16px">Twitter</text>
+        </a>
+      </div>
+      <div>
+        <a class="child" style="text-align: center; text-decoration: none; transbutton" href="https://www.youtube.com/channel/UCZRHmo7vZ4XYkEseZkEsTGg" target="_blank">
+          <text class="w3-text-white fa fa-youtube" style="font-size:24px"></text>
+          <text class="w3-text-white" style="font-size:16px">YouTube</text>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>
