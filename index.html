@@ -17,10 +17,17 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  body,h1 {font-family: "Raleway", sans-serif}
-  body, html {height: 100%}
+  body, h1 {
+    font-family: "Raleway", sans-serif;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-colour: #363636;
+  }
   .bgimg {
-    background-image: url('assets/img/bg.jpg');
+    <!--background-image: url('assets/img/bg.jpg');-->
     min-height: 100%;
     background-position: center;
     background-size: cover;
@@ -42,14 +49,16 @@
 </style>
   <body>
     <script src="js.js"></script>
-    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-      <div class="w3-display-topleft w3-padding-large w3-xlarge">Welcome</div>
-      <div class="w3-display-middle">
-        <h1 class="w3-jumbo w3-animate-top">WEBSITE<br>COMING SOON</h1>
-        <hr class="w3-border-grey" style="margin:auto;width:40%">
-        <!--<p class="w3-large w3-center">35 days left</p>-->
-      </div>
-      <div class="w3-display-bottomleft w3-padding-large">
+    <video autoplay muted loop id="bg" style="min-width: 100%; min-height: 100%; width: auto; height: auto; margin: auto; z-index: -100; position: fixed">
+      <source src="assets/vids/forest.mp4" type="video/mp4">
+    </video>
+    <div class="w3-display-topleft w3-padding-large w3-xlarge w3-animate-opacity w3-text-white">Welcome</div>
+    <div class="w3-display-middle">
+      <h1 class="w3-jumbo w3-animate-opacity w3-text-white" style="position: center; margin: auto;">WEBSITE<br>COMING SOON</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <!--<p class="w3-large w3-center">... days left</p>-->
+    </div>
+      <div class="w3-display-bottomleft w3-padding-large w3-animate-opacity w3-text-white">
         <a style="text-align: center; text-decoration: none; transbutton" href="https://github.com/ScriptExec" target="_blank">
           <e>
             <text class="w3-text-white fa" style="font-size:24px">&#xf09b;</text>
