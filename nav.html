@@ -1,0 +1,156 @@
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="manifest" href="assets/icons/site.webmanifest">
+<link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#363636">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+function sidebar_open() {
+    document.getElementById("sidebar").style.marginLeft = "auto";
+    document.getElementById("mySidebar").style.width = "auto";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+}
+function sidebar_close() {
+    document.getElementById("sidebar").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+<style>
+  body, h1 {
+    font-family: "Raleway", sans-serif;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-colour: #363636;
+  }
+  .bgimg {
+    <!--background-image: url('assets/img/bg.jpg');-->
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .blurred {
+    background-filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  .fadeInButton
+  {
+    opacity: 0.6;
+  }
+  .fadeInButton:hover
+  {
+    opacity: 1;
+  }
+  .transbutton {     
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    text-decoration: none;  
+    outline:none;
+    border: none;
+  }
+  .dropdownButton
+  {
+    color: white;
+    background-color:rgba(56, 56, 56, 0.25);
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  .dropdownButton:hover
+  {
+    transition-duration: 1s;
+    background-color:rgba(36, 36, 36, 1);
+  }
+  .sidebarButton
+  {
+    color: white;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  .sidebarButton:hover
+  {
+    transition-duration: 1s;
+    background-color:rgba(0, 0, 0, 1);
+  }
+  .dropdown
+  {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .dropdown-content
+  {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+  }
+  .dropdown:hover .dropdown-content
+  {
+    display: block;
+    background-color:rgba(36, 36, 36, 0.75);
+  }
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    position: fixed;
+    height: 100%;
+    z-index: 999999999999999999;
+    overflow: auto;
+    display: none;
+    transition-duration: 1s;
+  }
+</style>
+<div id="sidebar" style="left: 0%;">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge w3-animate-opacity w3-text-white">
+    <button id="openNav" class="w3-text-white transbutton fadeInButton" style="font-size:24px" onclick="sidebar_open()">&#9776;</button>
+    <text id="pageName" style="font-size:24px"></text>
+    <script>
+    window.onload = function(){
+        document.getElementById('pageName').innerHTML = pageName;
+    };
+    </script>
+  </div>
+  <div class="sidebar w3-bar-block w3-card w3-animate-left" onmouseleave=sidebar_close() style="background-color:rgba(36, 36, 36, 0.75);" id="mySidebar">
+    <button class="w3-bar-item w3-xxlarge sidebarButton" onclick="sidebar_close()">&times;</button>
+    <a href="downloads" class="w3-bar-item sidebarButton">Downloads</a>
+    <div class="dropdown">
+      <button class="w3-bar-item sidebarButton">Code <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="documentation" class="w3-bar-item dropdownButton">Documentation</a>
+        <a href="examples" class="w3-bar-item dropdownButton">Examples</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="w3-bar-item sidebarButton">Games <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="minecraft" class="w3-bar-item dropdownButton">Minecraft</a>
+        <a href="csgo" class="w3-bar-item dropdownButton">CS:GO</a>
+      </div>
+    </div>
+  </div>
+</div>
