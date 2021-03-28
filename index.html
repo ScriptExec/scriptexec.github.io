@@ -34,6 +34,7 @@ function sidebar_close() {
 <style>
   body, h1 {
     font-family: "Raleway", sans-serif;
+    height: 100%;
   }
   body, html {
     margin: 0;
@@ -133,7 +134,7 @@ function sidebar_close() {
 
 <body>
   <welcome>
-    <video autoplay muted loop id="bg" style="background-colour: #363636; min-width: 100%; min-height: 100%; width: auto; height: auto; margin: auto; z-index: -100; position: fixed">
+    <video autoplay data-autoplay muted loop id="bg" loading="eager" style="--aspect-ratio: 16 / 9; background-colour: #363636; position: fixed; width: 100%; height auto;">
       <source src="assets/vids/forest.mp4" type="video/mp4">
     </video>
     <div id="sidebar" style="left: 0%;">
