@@ -135,13 +135,34 @@ function sidebar_close() {
     display: none;
     transition-duration: 1s;
   }
+  .videoBg{
+    pointer-events: none;
+    --aspect-ratio: 16 / 9;
+    position: fixed;
+    width: 100%;
+    height auto;
+    object-fit:fill;
+    padding: 0;
+  }
+  @media (min-aspect-ratio: 16/9) {
+      .videoBg{
+        width: 100%;
+        height: auto;
+      }
+    }
+  @media (max-aspect-ratio: 16/9) {
+    .videoBg {
+      width:100%; 
+      height: 100%;
+    }
+  }
 </style>
 
 <body>
   <welcome>
-    <video autoplay muted loop id="bg" loading="eager" style="pointer-events: none; --aspect-ratio: 16 / 9; background-colour: #363636; position: fixed; width: 100%; height auto;">
-      <source src="assets/vids/forest.mp4" type="video/mp4">
-    </video>
+      <video autoplay muted loop id="bg" loading="eager" class="videoBg">
+        <source src="assets/vids/forest.mp4" type="video/mp4">
+      </video>
     <div id="sidebar" style="left: 0%;">
       <div class="w3-display-topleft w3-padding-large w3-xlarge w3-animate-opacity w3-text-white">
         <button id="openNav" class="w3-text-white transbutton fadeInButton" style="font-size:24px" onclick="sidebar_open()">&#9776;</button>
